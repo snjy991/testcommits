@@ -1,5 +1,5 @@
 node{
-    def pobj=load ProjectList.groovy
+    def pobj=load "./ProjectList.groovy"
      List<String> plist= pobj.ProjectList()
    
     def userInput = input(
