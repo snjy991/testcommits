@@ -1,8 +1,8 @@
+def pobj=load "ProjectList.groovy"
+List<String> plist= pobj.ProjectList()
 pipeline{
     agent any
     parameters {
-    def pobj=load "ProjectList.groovy"
-	List<String> plist= pobj.ProjectList()
 	def userInput = input(
         id: 'userInput', message: 'input parameters', parameters: [
             [
