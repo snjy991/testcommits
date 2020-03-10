@@ -12,7 +12,7 @@ pipeline {
                     env.ProjectList = input message: 'User input required', ok: 'ProjectList!',
                             parameters: [choice(name: 'ProjectList', choices: plist, description: 'What is the Project Name?')]
                 }
-                echo "Release scope selected: ${env.ProjectList}"
+                echo "Project selected: ${env.ProjectList}"
             }
         }
     }
