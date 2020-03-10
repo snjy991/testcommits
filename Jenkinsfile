@@ -1,7 +1,4 @@
 pipeline{
     agent any
-	parameters {
-    def pobj=load "ProjectList.groovy"
-    echo pobj
-	}
+    booleanParam(defaultValue: true, description: '', name: 'userFlag')       
 }
