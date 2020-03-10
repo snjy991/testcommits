@@ -9,10 +9,10 @@ pipeline {
 	                List<String> plist= pobj.ProjectList()
 			echo "plist is ${plist}"
                     // Show the select input
-                    env.RELEASE_SCOPE = input message: 'User input required', ok: 'Release!',
-                            parameters: [choice(name: 'RELEASE_SCOPE', choices: plist, description: 'What is the release scope?')]
+                    env.ProjectList = input message: 'User input required', ok: 'ProjectList!',
+                            parameters: [choice(name: 'ProjectList', choices: plist, description: 'What is the Project Name?')]
                 }
-                echo "Release scope selected: ${env.RELEASE_SCOPE}"
+                echo "Release scope selected: ${env.ProjectList}"
             }
         }
     }
