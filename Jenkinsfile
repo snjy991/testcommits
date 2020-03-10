@@ -1,4 +1,5 @@
-node{
-    def pobj=load "./ProjectList.groovy"
+pipeline{
+    agent any
+    def pobj=load "ProjectList.groovy"
     echo pobj
 }
